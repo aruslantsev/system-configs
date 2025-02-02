@@ -1,0 +1,25 @@
+*/* networkmanager -handbook -kaccounts -semantic-desktop
+
+app-crypt/qca qt6 # kwallet
+app-text/poppler qt6 nss # okular
+dev-qt/qt5compat qml icu # plasma-meta
+dev-qt/qtbase libproxy icu # ark
+dev-qt/qtcore icu  # core
+dev-qt/qtmultimedia qml # core
+kde-apps/kio-extras -man mtp
+kde-frameworks/kconfig qml # core
+kde-frameworks/prison qml # plasma-meta
+kde-frameworks/sonnet qml # core
+kde-plasma/kwin lock # plasma-meta
+kde-plasma/plasma-meta -crypt -desktop-portal thunderbolt
+media-fonts/noto -extra
+media-libs/phonon qt6 # plasma-meta
+media-libs/phonon-vlc qt6 # phonon
+net-libs/kdsoap qt6
+sys-auth/polkit introspection
+sys-auth/polkit-qt qt6 # polkit-kde-agent
+sys-libs/zlib minizip # plasma-meta
+x11-base/xwayland libei # kwin
+
+media-video/vlc -gui
+net-p2p/qbittorrent qt6

@@ -1,0 +1,24 @@
+{
+  "srv01": {
+    "local": [
+      {
+        "destination_port": 8900,
+        "destination_address": "localhost",
+        "local_port": 8900,
+        "local_address": null
+      },
+      {
+        "destination_port": 5000
+      },
+    ],
+    "remote": []
+  },
+  "srv02": {
+    "local": [
+      {
+        "destination_port": 8080
+      }
+    ],
+    "remote": []
+  }
+}

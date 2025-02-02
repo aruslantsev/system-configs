@@ -1,0 +1,2 @@
+dev-qt/qtgui egl # vlc[+gui]
+media-video/vlc -vaapi

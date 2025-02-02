@@ -1,0 +1,63 @@
+services:
+  postgres-server:
+    image: postgres:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 512M
+    environment:
+      POSTGRES_USER: $PG_ZABBIX_USER
+      POSTGRES_PASSWORD: $PG_ZABBIX_PASSWORD
+      POSTGRES_DB: $PG_ZABBIX_DB
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ${PG_VOLUME:-.}/pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  zabbix-server-pgsql:
+    image:  ${ZABBIX_SERVER_IMAGE_NAME:-zabbix/zabbix-server-pgsql:ubuntu-6.0-latest}
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 512M
+    environment:
+      DB_SERVER_HOST: postgres-server
+      POSTGRES_USER: $PG_ZABBIX_USER
+      POSTGRES_PASSWORD: $PG_ZABBIX_PASSWORD
+      POSTGRES_DB: $PG_ZABBIX_DB
+      ZBX_IPMIPOLLERS: "3"
+    ports:
+      - 10051:10051
+    volumes:
+      - /var/run/dbus:/var/run/dbus
+      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+    restart: unless-stopped
+    depends_on:
+      - postgres-server
+
+  zabbix-web-nginx-pgsql:
+    image: ${ZABBIX_WEB_IMAGE_NAME:-zabbix/zabbix-web-nginx-pgsql:ubuntu-6.0-latest}
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
+          memory: 512M
+    environment:
+      ZBX_SERVER_HOST: zabbix-server-pgsql
+      DB_SERVER_HOST: postgres-server
+      POSTGRES_USER: $PG_ZABBIX_USER
+      POSTGRES_PASSWORD: $PG_ZABBIX_PASSWORD
+      POSTGRES_DB: $PG_ZABBIX_DB
+    ports:
+      - 8443:8443
+      - 8080:8080
+    volumes:
+      - /var/run/dbus:/var/run/dbus
+      - /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket
+      - /etc/ssl/nginx:/etc/ssl/nginx:ro
+    restart: unless-stopped
+    depends_on:
+      - postgres-server
+      - zabbix-server-pgsql

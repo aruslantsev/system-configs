@@ -1,0 +1,2 @@
+gcc -march=native -E -v - </dev/null 2>&1 | grep cc1
+gcc -### -E - -march=native 2>&1 | sed -r '/cc1/!d;s/(")|(^.* - )|( -mno-[^\ ]+)//g'

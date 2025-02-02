@@ -1,0 +1,16 @@
+unset SSH_ASKPASS
+
+if [ $(pgrep -u $USER ssh-agent | wc -l) -eq 0 ] && [ -S ~/.ssh/ssh-agent.sock ]; then
+	echo No ssh-agent is running but socket exists. Removing it.
+	rm ~/.ssh/ssh-agent.sock
+fi
+if [ $(pgrep -u $USER ssh-agent | wc -l) -ne 0 ] && [ ! -S ~/.ssh/ssh-agent.sock ]; then
+	echo Socket does not exist but ssh-agent is running. Maybe you want to stop ssh agents before running a new one?
+fi
+if [ ! -S ~/.ssh/ssh-agent.sock ]; then
+	echo Starting ssh-agent
+	ssh-agent -a ~/.ssh/ssh-agent.sock > /dev/null
+	grep "AddKeysToAgent[[:space:]]yes" ~/.ssh/config > /dev/null || echo 'Insert "AddKeysToAgent yes" into your ~/.ssh/config'
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
+export SSH_AGENT_PID=$(pgrep -u $USER ssh-agent)

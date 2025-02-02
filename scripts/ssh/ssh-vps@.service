@@ -1,0 +1,16 @@
+[Unit]
+Description=SSH tunnel to %I
+Requires=network-online.target
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+# User=andrei
+# Group=andrei
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/bin/ssh -o TCPKeepAlive=no -o ExitOnForwardFailure=yes -o ConnectTimeout=15 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -N -R PORT:localhost:22 -i KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null USER@%i
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
