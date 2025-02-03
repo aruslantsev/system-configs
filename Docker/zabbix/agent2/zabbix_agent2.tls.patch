@@ -1,0 +1,14 @@
+--- zabbix_agent2.conf.old	2024-11-11 18:23:24.166521168 +0200
++++ zabbix_agent2.conf	2024-11-11 18:23:54.418521052 +0200
+@@ -343,6 +343,11 @@
+ 
+ ####### TLS-RELATED PARAMETERS #######
+ 
++TLSConnect=psk
++TLSAccept=psk
++TLSPSKFile=/etc/zabbix/zabbix_agentd.psk
++TLSPSKIdentity=PSK 001
++
+ ### Option: TLSConnect
+ #	How the agent should connect to server or proxy. Used for active checks.
+ #	Only one value can be specified:

@@ -1,0 +1,21 @@
+--- zabbix_agent2.conf.old	2024-11-08 23:46:57.687597164 +0200
++++ zabbix_agent2.conf	2024-11-08 12:44:17.775209605 +0200
+@@ -75,7 +75,8 @@
+ # Default:
+ # Server=
+ 
+-Server=127.0.0.1
++# Server=127.0.0.1
++Server=0.0.0.0/0
+ 
+ ### Option: ListenPort
+ #	Agent will listen on this port for connections from the server.
+@@ -139,7 +140,7 @@
+ # Default:
+ # Hostname=
+ 
+-Hostname=Zabbix server
++# Hostname=Zabbix server
+ 
+ ### Option: HostnameItem
+ #	Item used for generating Hostname if it is undefined. Ignored if Hostname is defined.
