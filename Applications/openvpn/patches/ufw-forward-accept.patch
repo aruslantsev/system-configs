@@ -1,0 +1,11 @@
+--- ufw.old     2023-11-06 13:38:57.398462382 +0300
++++ ufw 2023-11-06 13:39:07.754717065 +0300
+@@ -16,7 +16,7 @@
+ 
+ # Set the default forward policy to ACCEPT, DROP or REJECT.  Please note that
+ # if you change this you will most likely want to adjust your rules
+-DEFAULT_FORWARD_POLICY="DROP"
++DEFAULT_FORWARD_POLICY="ACCEPT"
+ 
+ # Set the default application policy to ACCEPT, DROP, REJECT or SKIP. Please
+ # note that setting this to ACCEPT may be a security risk. See 'man ufw' for

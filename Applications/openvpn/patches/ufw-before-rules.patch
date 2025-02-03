@@ -1,0 +1,18 @@
+--- before.rules.old    2023-11-06 13:29:50.813049395 +0300
++++ before.rules        2023-11-06 13:30:21.749806459 +0300
+@@ -8,6 +8,15 @@
+ #   ufw-before-forward
+ #
+ 
++# START OPENVPN RULES
++# NAT table rules
++*nat
++:POSTROUTING ACCEPT [0:0]
++# Allow traffic from OpenVPN client to eth0 (change to the interface you discovered!)
++-A POSTROUTING -s 10.8.0.0/8 -o eth0 -j MASQUERADE
++COMMIT
++# END OPENVPN RULES
++
+ # Don't delete these required lines, otherwise there will be errors
+ *filter
+ :ufw-before-input - [0:0]
