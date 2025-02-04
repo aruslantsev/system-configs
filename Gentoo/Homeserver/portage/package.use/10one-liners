@@ -1,0 +1,11 @@
+app-admin/sudo -sendmail
+dev-vcs/git -perl
+net-analyzer/nmap ncat
+net-dns/avahi mdnsresponder-compat  # ntp
+net-dns/avahi dbus  # samba
+sys-apps/openrc sysv-utils
+sys-apps/systemd-utils boot kernel-install
+sys-apps/smartmontools -daemon -update-drivedb
+sys-apps/iproute2 -iptables
+sys-apps/util-linux tty-helpers
+sys-fs/lvm2 -thin

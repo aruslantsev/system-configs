@@ -1,0 +1,12 @@
+dns_domain_lo="localdomain"
+
+config_eth0="null"
+config_eth1="null"
+slaves_bond0="eth0 eth1"
+config_bond0="dhcp"
+mode_bond0="balance-rr"
+# balance-alb
+# active-backup
+bond0_downdelay="200"
+bond0_updelay="200"
+bond0_miimon="100"
