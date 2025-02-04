@@ -1,5 +1,4 @@
-OpenVPN
-=========
+# OpenVPN
 
 Setup openvpn server
 
