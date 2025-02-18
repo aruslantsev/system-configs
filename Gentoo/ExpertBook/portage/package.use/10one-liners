@@ -1,3 +1,4 @@
+app-arch/7zip rar
 dev-libs/glib -dbus # needs dconf otherwise
 dev-libs/libpcre2 pcre32 # fdupes
 media-video/ffmpeg libdrm

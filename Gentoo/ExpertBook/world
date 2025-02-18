@@ -1,6 +1,5 @@
 app-admin/rsyslog
-app-arch/p7zip
-app-arch/unrar
+app-arch/7zip
 app-crypt/efitools
 app-editors/nano
 app-emulation/qemu
@@ -15,11 +14,12 @@ app-portage/cpuid2cpuflags
 app-portage/gentoolkit
 app-shells/bash-completion
 dev-debug/strace
+dev-qt/qt-creator
+dev-qt/qttools
 dev-util/vulkan-tools
 dev-vcs/git
 kde-apps/ark
 kde-apps/dolphin
-kde-apps/dragon
 kde-apps/gwenview
 kde-apps/kamera
 kde-apps/kate
@@ -35,7 +35,6 @@ kde-apps/spectacle
 kde-apps/svgpart
 kde-misc/kdeconnect
 kde-plasma/plasma-meta
-kde-plasma/xdg-desktop-portal-kde
 media-fonts/terminus-font
 media-gfx/gimp
 media-gfx/hugin
@@ -47,6 +46,7 @@ media-sound/pavucontrol-qt
 media-video/libva-utils
 net-analyzer/nmap
 net-analyzer/traceroute
+net-dialup/minicom
 net-firewall/nftables
 net-fs/nfs-utils
 net-misc/networkmanager
@@ -76,6 +76,8 @@ sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/installkernel
 sys-kernel/linux-firmware
+sys-power/acpid
+sys-power/acpilight
 sys-power/cpupower
 sys-power/powertop
 sys-power/tlp
