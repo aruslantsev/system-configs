@@ -15,7 +15,7 @@
 
 # <fs>				<mountpoint>			<type>	<opts>							<dump> <pass>
 /dev/homeserver/gentoo		/				ext4	defaults,noatime,barrier=0,errors=remount-ro		0 1
-UUID=7641-B718			/boot				vfat	umask=0077,noatime					1 2
+UUID=7641-B718			/boot				vfat	umask=0022,noatime					1 2
 /dev/homeserver/swap		none				swap	sw							0 0
 /dev/homeserver/home		/home				ext4	defaults,noatime,nodev,nosuid,barrier=0			0 2
 /dev/homeserver/distfiles	/var/cache/distfiles		ext4	defaults,noatime,nodev,barrier=0			0 2

@@ -1,0 +1,2 @@
+# /etc/exports: NFS file systems being exported.  See exports(5).
+/srv/shares 192.168.0.0/16(ro,no_all_squash,sync,no_subtree_check)
