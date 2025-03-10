@@ -35,6 +35,7 @@
 /etc/runlevels/default/net.bond0
 /etc/runlevels/default/netmount
 /etc/runlevels/default/nfs
+/etc/runlevels/default/nftables
 /etc/runlevels/default/rsyslog
 /etc/runlevels/default/samba
 /etc/runlevels/default/sshd

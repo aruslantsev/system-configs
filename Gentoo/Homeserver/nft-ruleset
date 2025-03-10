@@ -7,10 +7,12 @@ table inet filter {
 		type filter hook input priority filter; policy drop;
 
 		iif lo accept comment "Accept any localhost traffic"
+		ct state invalid counter drop comment "Drop invalid connections"
+		fib daddr . iif type != { local, broadcast, multicast } counter drop comment "Drop packets if the destination IP address is not configured on the incoming interface (strong host model)"
+
 		iif != lo ip daddr 127.0.0.1/8 counter drop comment "drop connections to loopback not coming from loopback"
 		iif != lo ip6 daddr ::1/128 counter drop comment "drop connections to loopback not coming from loopback"
 
-		ct state invalid counter drop comment "Drop invalid connections"
 		ct state {established, related} counter accept comment "Accept traffic originated from us"
 
 		meta l4proto ipv6-icmp counter accept comment "Accept ICMPv6"
