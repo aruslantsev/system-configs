@@ -34,6 +34,7 @@
 /etc/runlevels/default/irqbalance
 /etc/runlevels/default/local
 /etc/runlevels/default/netmount
+/etc/runlevels/default/nftables
 /etc/runlevels/default/rsyslog
 /etc/runlevels/default/sshd
 /etc/runlevels/default/tlp
