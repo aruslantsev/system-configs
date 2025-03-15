@@ -1,0 +1,35 @@
+# /etc/fstab: static file system information.
+#
+# See the manpage fstab(5) for more information.
+#
+# NOTE: The root filesystem should have a pass number of either 0 or 1.
+#       All other filesystems should have a pass number of 0 or greater than 1.
+#
+# NOTE: Even though we list ext4 as the type here, it will work with ext2/ext3
+#       filesystems.  This just tells the kernel to use the ext4 driver.
+#
+# NOTE: You can use full paths to devices like /dev/sda3, but it is often
+#       more reliable to use filesystem labels or UUIDs. See your filesystem
+#       documentation for details on setting a label. To obtain the UUID, use
+#       the blkid(8) command.
+
+# <fs>						<mountpoint>			<type>	<opts>							<dump> <pass>
+
+#LABEL=boot					/boot				ext4	defaults						1 2
+#UUID=58e72203-57d1-4497-81ad-97655bd56494	/				xfs	defaults						0 1
+#LABEL=swap					none				swap	sw							0 0
+#/dev/cdrom					/mnt/cdrom			auto	noauto,ro						0 0
+/dev/mmcblk0p1				        /boot				vfat    noatime,nodev,nosuid,noexec				1 2
+/dev/mapper/raspberrypi-root			/				ext4    noatime							0 0
+/dev/mapper/raspberrypi-home			/home				ext4	noatime							0 0
+/dev/mapper/raspberrypi-distfiles		/var/cache/distfiles		ext4	noatime							0 0
+none						/tmp/				tmpfs	defaults,size=512m,nodev,nosuid,noexec			0 0
+none						/var/tmp			tmpfs	defaults,size=6g,nodev					0 0
+none						/var/log			tmpfs	defaults,size=128m,nodev,nosuid,noexec,mode=0755	0 0
+none						/var/cache/edb/dep		tmpfs	defaults,size=1g,nodev,nosuid,noexec,mode=0755		0 0
+none						/var/cache/revdep-rebuild	tmpfs	defaults,size=8m,nodev,nosuid,noexec,mode=0700		0 0
+# none						/var/cache/powertop		tmpfs	defaults,size=8m,nodev,nosuid,noexec,mode=0755		0 0
+none						/usr/src			tmpfs	defaults,size=1m,nodev,nosuid,mode=0755			0 0
+none						/var/lib/dhcpcd			tmpfs	defaults,size=1m,nodev,nosuid,noexec,mode=0755		0 0
+# none						/var/lib/upower			tmpfs	defaults,size=4m,nodev,nosuid,noexec,mode=0755		0 0
+# none 						/var/lib/NetworkManager		tmpfs	defaults,size=4m,nodev,nosuid,noexec,mode=0700		0 0

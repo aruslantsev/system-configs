@@ -1,0 +1,8 @@
+app-admin/sudo -sendmail
+dev-libs/glib -dbus # needs dconf otherwise
+dev-libs/glib -mime
+dev-vcs/git -perl
+net-misc/networkmanager -bluetooth -concheck -modemmanager -ppp
+net-wireless/wpa_supplicant dbus tkip
+sys-apps/util-linux tty-helpers
+sys-fs/lvm2 -thin

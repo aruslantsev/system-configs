@@ -1,0 +1,22 @@
+#!/bin/sh
+LAST_RUN="/tmp/last_ntp_sync"
+MIN_TIME_DIFF=86400
+
+current_time=$(date +%s)
+
+if [ -f $LAST_RUN ]
+then
+	previous_run=$(cat $LAST_RUN)
+else
+	previous_run=0
+fi
+
+time_diff=$((current_time-previous_run))
+
+if [ $time_diff -ge $MIN_TIME_DIFF ]
+then
+	echo "*** $(date -R) ***" | logger
+       	echo "Starting ntpdate..." | logger
+	/usr/sbin/ntpdate -s -b -u 0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org | logger && echo $current_time > $LAST_RUN
+	echo "*** $(date -R) ***" | logger
+fi
