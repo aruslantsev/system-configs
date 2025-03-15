@@ -23,6 +23,7 @@
 ./var/lib/module-rebuild/*
 ./var/lib/NetworkManager
 ./var/lib/alsa/*
+./var/lib/samba/*
 ./home/*
 ./usr/src/*
 ./lost+found
