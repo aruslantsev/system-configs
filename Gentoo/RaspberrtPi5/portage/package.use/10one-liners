@@ -1,4 +1,5 @@
 app-admin/sudo -sendmail
+dev-embedded/rpi-eeprom pi5
 dev-libs/glib -dbus # needs dconf otherwise
 dev-libs/glib -mime
 dev-vcs/git -perl

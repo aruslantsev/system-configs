@@ -1,17 +1,22 @@
-kernel=kernel8.img
-initramfs initramfs8.img followkernel
+kernel=kernel_2712.img
+# kernel=kernel8.img
+initramfs initramfs_2712.img followkernel
+# initramfs initramfs8.img followkernel
 
-# have a properly sized image
-disable_overscan=1
+# Enable UART0/ttyAMA0 on GPIO 14 & 15 and make it the console UART
+dtparam=uart0
+dtparam=uart0_console
+
+dtparam=i2c_arm=on
+#dtparam=i2s=on
+dtparam=spi=on
 
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
 
+arm_64bit=1
+
+disable_overscan=1
+
 # Enable DRM VC4 V3D driver
 dtoverlay=vc4-kms-v3d-pi5
-
-# Enable UART
-# Enable UART0/ttyAMA0 on GPIO 14 & 15
-dtparam=uart0
-# Enable UART0/ttyAMA0 on GPIO 14 & 15 and make it the console UART
-dtparam=uart0_console

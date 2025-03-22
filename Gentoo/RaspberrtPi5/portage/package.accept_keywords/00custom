@@ -1,2 +1,3 @@
+app-misc/evtest ~arm64
 app-misc/symlinks **
 sys-auth/nss-mdns ~arm64

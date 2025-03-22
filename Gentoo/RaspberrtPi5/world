@@ -1,5 +1,6 @@
 app-admin/rsyslog
 app-admin/sudo
+app-editors/nano
 app-misc/fdupes
 app-misc/mc
 app-misc/symlinks
@@ -7,9 +8,12 @@ app-misc/tmux
 app-portage/gentoolkit
 app-shells/bash-completion
 dev-debug/strace
+dev-embedded/raspberrypi-utils
+dev-embedded/rpi-eeprom
 dev-vcs/git
 net-misc/networkmanager
 net-misc/ntp
+sys-apps/i2c-tools
 sys-apps/usbutils
 sys-auth/nss-mdns
 sys-fs/cryptsetup
