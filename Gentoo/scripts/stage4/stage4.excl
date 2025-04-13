@@ -14,6 +14,7 @@
 ./var/tmp/*
 ./var/tmp/.*
 ./var/log/*
+./var/log/.*
 ./var/cache/edb/dep/*
 ./var/cache/revdep-rebuild/*
 ./var/cache/powertop/*
@@ -33,3 +34,4 @@
 ./home/*
 ./usr/src/*
 ./lost+found
+./chroot.sh
