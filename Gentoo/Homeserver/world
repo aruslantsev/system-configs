@@ -9,7 +9,6 @@ app-misc/fdupes
 app-misc/mc
 app-misc/symlinks
 app-misc/tmux
-app-portage/cpuid2cpuflags
 app-portage/gentoolkit
 app-shells/bash-completion
 dev-debug/strace
