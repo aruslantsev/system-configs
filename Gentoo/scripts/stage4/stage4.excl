@@ -21,6 +21,7 @@
 ./var/cache/distfiles/*
 ./var/cache/binpkgs/*
 ./var/db/repos/*
+./var/db/sudo/*
 ./var/lib/alsa/*
 ./var/lib/bluetooth/*
 ./var/lib/dhcpcd/*
