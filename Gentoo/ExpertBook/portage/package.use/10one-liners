@@ -1,3 +1,4 @@
+app-admin/sudo -sendmail
 app-arch/7zip rar
 dev-libs/glib -dbus # needs dconf otherwise
 dev-libs/libpcre2 pcre32 # fdupes
@@ -12,3 +13,4 @@ sys-apps/smartmontools -daemon -update-drivedb
 sys-apps/iproute2 -iptables
 sys-apps/util-linux tty-helpers
 sys-fs/lvm2 -thin
+sys-kernel/dracut -dracut-cpio

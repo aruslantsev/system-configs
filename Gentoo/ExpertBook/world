@@ -1,4 +1,5 @@
 app-admin/rsyslog
+app-admin/sudo
 app-arch/7zip
 app-crypt/efitools
 app-editors/nano
@@ -10,7 +11,6 @@ app-misc/symlinks
 app-misc/tmux
 app-misc/wayland-utils
 app-office/libreoffice
-app-portage/cpuid2cpuflags
 app-portage/gentoolkit
 app-shells/bash-completion
 dev-debug/strace
@@ -31,10 +31,10 @@ kde-apps/kompare
 kde-apps/konsole
 kde-apps/kwalletmanager
 kde-apps/okular
-kde-apps/spectacle
 kde-apps/svgpart
 kde-misc/kdeconnect
 kde-plasma/plasma-meta
+kde-plasma/spectacle
 media-fonts/terminus-font
 media-gfx/gimp
 media-gfx/hugin
@@ -61,6 +61,8 @@ sys-apps/irqbalance
 sys-apps/lm-sensors
 sys-apps/lshw
 sys-apps/nvme-cli
+sys-apps/sdparm
+sys-apps/sg3_utils
 sys-apps/usbutils
 sys-auth/nss-mdns
 sys-boot/grub

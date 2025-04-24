@@ -25,5 +25,3 @@ menuentry 'UEFI Firmware Settings' {
 menuentry 'Memtest86+ 64bit UEFI' {
         chainloader /memtest64.efi
 }
-
-
