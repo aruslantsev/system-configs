@@ -32,4 +32,4 @@ none						/var/cache/revdep-rebuild	tmpfs	defaults,size=8m,nodev,nosuid,noexec,m
 none						/usr/src			tmpfs	defaults,size=1m,nodev,nosuid,mode=0755			0 0
 none						/var/lib/dhcpcd			tmpfs	defaults,size=1m,nodev,nosuid,noexec,mode=0755		0 0
 # none						/var/lib/upower			tmpfs	defaults,size=4m,nodev,nosuid,noexec,mode=0755		0 0
-# none 						/var/lib/NetworkManager		tmpfs	defaults,size=4m,nodev,nosuid,noexec,mode=0700		0 0
+none						/var/lib/NetworkManager		tmpfs	defaults,size=4m,nodev,nosuid,noexec,mode=0700		0 0
