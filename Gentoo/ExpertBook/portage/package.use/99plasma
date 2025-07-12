@@ -9,6 +9,7 @@ dev-qt/qtcore icu  # core
 dev-qt/qtmultimedia qml # core
 kde-apps/kio-extras mtp
 kde-frameworks/kconfig qml # core
+kde-frameworks/kfilemetadata taglib # elisa
 kde-frameworks/prison qml # plasma-meta
 kde-frameworks/sonnet qml # core
 kde-plasma/kwin lock # plasma-meta

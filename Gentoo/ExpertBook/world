@@ -20,6 +20,7 @@ dev-util/vulkan-tools
 dev-vcs/git
 kde-apps/ark
 kde-apps/dolphin
+kde-apps/dragon
 kde-apps/gwenview
 kde-apps/kamera
 kde-apps/kate
@@ -29,6 +30,7 @@ kde-apps/kfind
 kde-apps/kolourpaint
 kde-apps/kompare
 kde-apps/konsole
+kde-apps/krdc
 kde-apps/kwalletmanager
 kde-apps/okular
 kde-apps/svgpart
@@ -42,6 +44,7 @@ media-gfx/imagemagick
 media-libs/libva-intel-media-driver
 media-sound/alsa-tools
 media-sound/alsa-utils
+media-sound/elisa
 media-sound/pavucontrol-qt
 media-video/libva-utils
 net-analyzer/nmap
