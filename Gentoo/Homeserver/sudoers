@@ -12,31 +12,31 @@
 ##
 ## Groups of machines. These may include host names (optionally with wildcards),
 ## IP addresses, network numbers or netgroups.
-# Host_Alias    WEBSERVERS = www1, www2, www3
+# Host_Alias	WEBSERVERS = www1, www2, www3
 
 ##
 ## User alias specification
 ##
 ## Groups of users.  These may consist of user names, uids, Unix groups,
 ## or netgroups.
-# User_Alias    ADMINS = millert, dowdy, mikef
+# User_Alias	ADMINS = millert, dowdy, mikef
 
 ##
 ## Cmnd alias specification
 ##
 ## Groups of commands.  Often used to group related commands together.
-# Cmnd_Alias    PROCESSES = /usr/bin/nice, /bin/kill, /usr/bin/renice, \
-#                           /usr/bin/pkill, /usr/bin/top
+# Cmnd_Alias	PROCESSES = /usr/bin/nice, /bin/kill, /usr/bin/renice, \
+# 			    /usr/bin/pkill, /usr/bin/top
 #
-# Cmnd_Alias    REBOOT = /sbin/halt, /sbin/reboot, /sbin/poweroff
+# Cmnd_Alias	REBOOT = /sbin/halt, /sbin/reboot, /sbin/poweroff
 #
-# Cmnd_Alias    DEBUGGERS = /usr/bin/gdb, /usr/bin/lldb, /usr/bin/strace, \
-#                           /usr/bin/truss, /usr/bin/bpftrace, \
-#                           /usr/bin/dtrace, /usr/bin/dtruss
+# Cmnd_Alias	DEBUGGERS = /usr/bin/gdb, /usr/bin/lldb, /usr/bin/strace, \
+# 			    /usr/bin/truss, /usr/bin/bpftrace, \
+# 			    /usr/bin/dtrace, /usr/bin/dtruss
 #
-# Cmnd_Alias    PKGMAN = /usr/bin/apt, /usr/bin/dpkg, /usr/bin/rpm, \
-#                        /usr/bin/yum, /usr/bin/dnf,  /usr/bin/zypper, \
-#                        /usr/bin/pacman
+# Cmnd_Alias	PKGMAN = /usr/bin/apt, /usr/bin/dpkg, /usr/bin/rpm, \
+# 			 /usr/bin/yum, /usr/bin/dnf,  /usr/bin/zypper, \
+# 			 /usr/bin/pacman
 
 ##
 ## Defaults specification

@@ -20,6 +20,7 @@ net-firewall/nftables
 net-fs/nfs-utils
 net-fs/samba
 net-misc/ntp
+net-misc/ssh-remote
 sys-apps/dmidecode
 sys-apps/ethtool
 sys-apps/hdparm
