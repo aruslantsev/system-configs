@@ -48,6 +48,7 @@ media-sound/elisa
 media-sound/pavucontrol-qt
 media-video/libva-utils
 net-analyzer/nmap
+net-analyzer/tcpdump
 net-analyzer/traceroute
 net-dialup/minicom
 net-firewall/nftables
@@ -82,7 +83,6 @@ sys-kernel/gentoo-sources
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-power/acpid
-sys-power/acpilight
 sys-power/cpupower
 sys-power/powertop
 sys-power/tlp

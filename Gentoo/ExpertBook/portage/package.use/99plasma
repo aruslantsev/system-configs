@@ -29,3 +29,5 @@ media-video/vlc -gui
 net-p2p/qbittorrent qt6
 dev-qt/qt-creator designer
 dev-qt/qttools designer qml
+
+app-crypt/gcr gtk
