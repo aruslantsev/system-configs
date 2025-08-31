@@ -1,3 +1,4 @@
+# https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/bookworm/etc.armhf/udev/rules.d/99-com.rules
 SUBSYSTEM=="input", GROUP="input", MODE="0660"
 SUBSYSTEM=="i2c-dev", GROUP="wheel", MODE="0660"
 SUBSYSTEM=="spidev", GROUP="wheel", MODE="0660"
