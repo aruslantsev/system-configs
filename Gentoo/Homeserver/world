@@ -39,6 +39,7 @@ sys-fs/dosfstools
 sys-fs/exfatprogs
 sys-fs/lvm2
 sys-fs/mdadm
+sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/installkernel
@@ -48,4 +49,5 @@ sys-power/cpupower
 sys-power/disks-spindown
 sys-process/cronie
 sys-process/htop
+sys-process/iotop
 sys-process/lsof
