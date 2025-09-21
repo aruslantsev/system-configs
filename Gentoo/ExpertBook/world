@@ -88,6 +88,7 @@ sys-power/powertop
 sys-power/tlp
 sys-process/cronie
 sys-process/htop
+sys-process/iotop
 sys-process/lsof
 www-client/firefox-bin
 x11-apps/igt-gpu-tools

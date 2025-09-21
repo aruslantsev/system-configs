@@ -13,6 +13,7 @@ kde-frameworks/kfilemetadata taglib # elisa
 kde-frameworks/prison qml # plasma-meta
 kde-frameworks/sonnet qml # core
 kde-plasma/kwin lock # plasma-meta
+kde-plasma/kwin-x11 lock # plasma-meta
 kde-plasma/plasma-meta -crypt -desktop-portal thunderbolt
 kde-plasma/powerdevil brightness-control
 media-fonts/noto -extra
@@ -25,9 +26,6 @@ sys-auth/polkit-qt qt6 # polkit-kde-agent
 sys-libs/zlib minizip # plasma-meta
 x11-base/xwayland libei # kwin
 
-media-video/vlc -gui
 net-p2p/qbittorrent qt6
 dev-qt/qt-creator designer
 dev-qt/qttools designer qml
-
-app-crypt/gcr gtk
