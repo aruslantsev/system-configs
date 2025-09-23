@@ -1,0 +1,16 @@
+VM_NAME="Linux"
+VM_MEMORY=8192
+CPU_NUM=2
+USB=1
+UEFI=1
+# VNC_PORT=12345
+SSH_PORT=10021
+# SAMBA_PATH=${HOME}/Downloads
+DRIVE_NAME=image.qcow2
+EXTRA_CMD="\
+	-device usb-host,vendorid=0x0483,productid=0x374e \
+	-device usb-host,hostbus=3,hostport=4.2
+"
+# in console: 
+# info usbhost
+# device_add usb-host,vendorid=0x0483,productid=0x374e
