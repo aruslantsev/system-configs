@@ -1,10 +1,12 @@
 app-admin/rsyslog
 app-admin/sudo
 app-arch/7zip
+app-cdr/cdrtools
 app-crypt/efitools
 app-editors/nano
 app-emulation/qemu
 app-forensics/chkrootkit
+app-misc/binwalk
 app-misc/fdupes
 app-misc/mc
 app-misc/symlinks
@@ -38,8 +40,6 @@ kde-misc/kdeconnect
 kde-plasma/plasma-meta
 kde-plasma/spectacle
 media-fonts/terminus-font
-media-gfx/gimp
-media-gfx/hugin
 media-gfx/imagemagick
 media-libs/libva-intel-media-driver
 media-sound/alsa-tools
@@ -82,7 +82,6 @@ sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/installkernel
 sys-kernel/linux-firmware
-sys-power/acpid
 sys-power/cpupower
 sys-power/powertop
 sys-power/tlp

@@ -5,7 +5,6 @@ app-text/poppler qt6 nss # okular
 dev-libs/glib introspection # dolphin
 dev-qt/qt5compat qml icu # plasma-meta
 dev-qt/qtbase libproxy icu # ark
-dev-qt/qtcore icu  # core
 dev-qt/qtmultimedia qml # core
 kde-apps/kio-extras mtp
 kde-frameworks/kconfig qml # core
@@ -18,8 +17,6 @@ kde-plasma/plasma-meta -crypt -desktop-portal thunderbolt
 kde-plasma/powerdevil brightness-control
 media-fonts/noto -extra
 media-libs/opencv qt6 # spectacle
-media-libs/phonon qt6 # plasma-meta
-media-libs/phonon-vlc qt6 # phonon
 net-libs/kdsoap qt6
 sys-auth/polkit introspection
 sys-auth/polkit-qt qt6 # polkit-kde-agent
