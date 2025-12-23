@@ -24,5 +24,3 @@ sys-libs/zlib minizip # plasma-meta
 x11-base/xwayland libei # kwin
 
 net-p2p/qbittorrent qt6
-dev-qt/qt-creator designer
-dev-qt/qttools designer qml

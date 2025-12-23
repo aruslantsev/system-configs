@@ -16,8 +16,6 @@ app-office/libreoffice
 app-portage/gentoolkit
 app-shells/bash-completion
 dev-debug/strace
-dev-qt/qt-creator
-dev-qt/qttools
 dev-util/vulkan-tools
 dev-vcs/git
 kde-apps/ark
