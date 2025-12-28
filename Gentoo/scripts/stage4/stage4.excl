@@ -7,6 +7,7 @@
 ./etc/*-
 ./etc/resolv.conf
 ./etc/machine-id
+./etc/ipsec.d
 ./etc/ssh/ssh_host*
 ./etc/ssh/keys*
 ./etc/lvm/archive
