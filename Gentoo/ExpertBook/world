@@ -55,6 +55,7 @@ net-misc/networkmanager
 net-misc/ntp
 net-p2p/qbittorrent
 net-vpn/networkmanager-l2tp
+net-vpn/networkmanager-libreswan
 net-vpn/networkmanager-openvpn
 net-wireless/iw
 sys-apps/dmidecode
