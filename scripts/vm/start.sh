@@ -1,13 +1,11 @@
 source ./env
 
-if [ -z "${DRIVE_NAME}" ]
-then
+if [ -z "${DRIVE_NAME}" ]; then
 	echo "Missing DRIVE_NAME in ./env"
 	exit 1
 fi
 
-if [ ! -f "${DRIVE_NAME}" ]
-then
+if [ ! -f "${DRIVE_NAME}" ]; then
 	echo "Image ${DRIVE_NAME} is missing. Create? (y/n)"
 	read ANS
 	if [ "${ANS}" != "y" ]
@@ -20,15 +18,18 @@ then
 	qemu-img create -f qcow2 ${DRIVE_NAME} ${SIZE} || exit 1
 fi
 
-if [ ! -z "${USB}" ] && [ "${USB}" -ne 0 ]
-then
+USB_CMD=""
+if [ ! -z "${USB}" ] && [ ${USB} -ne 0 ]; then
 	USB_CMD="-usb -device usb-mouse -device usb-kbd"
-else
-	USB_CMD=""
+fi
+if [ ! -z "${USB}" ] && [ ${USB} -eq 3 ]; then
+	USB_CMD="-device qemu-xhci,id=xhci -device usb-mouse,bus=xhci.0 -device usb-kbd,bus=xhci.0"
+fi
+if [ ! -z "${USB}" ] && [ ${USB} -eq 2 ]; then
+	USB_CMD="-device qemu-ehci,id=ehci -device usb-mouse,bus=ehci.0 -device usb-kbd,bus=ehci.0"
 fi
 
-if [ ! -z "${UEFI}" ] && [ "${UEFI}" -ne 0 ]
-then
+if [ ! -z "${UEFI}" ] && [ "${UEFI}" != "0" ]; then
 	if [ ! -f OVMF_VARS.fd ]
 	then
 		cp /usr/share/edk2-ovmf/OVMF_VARS.fd OVMF_VARS.fd
@@ -38,25 +39,21 @@ else
 	UEFI_CMD=""
 fi
 
-if [ ! -z "${VNC_PORT}" ]
-then
+if [ ! -z "${VNC_PORT}" ]; then
 	VNC_CMD="-vnc :${VNC_PORT} -monitor stdio"
 else
 	VNC_CMD=""
 fi
 
 NET_CMD="-nic user"
-if [ ! -z "${SSH_PORT}" ]
-then
+if [ ! -z "${SSH_PORT}" ]; then
 	NET_CMD="${NET_CMD},hostfwd=tcp::${SSH_PORT}-:22"
 fi
-if [ ! -z "${SAMBA_PATH}" ]
-then
+if [ ! -z "${SAMBA_PATH}" ]; then
 	NET_CMD="${NET_CMD},smb=${SAMBA_PATH}"
 fi
 
-if [ -z "${EXTRA_CMD}" ]
-then
+if [ -z "${EXTRA_CMD}" ]; then
 	EXTRA_CMD=""
 fi
 
