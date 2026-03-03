@@ -4,8 +4,10 @@ initramfs initramfs_2712.img followkernel
 # initramfs initramfs8.img followkernel
 
 # Enable UART0/ttyAMA0 on GPIO 14 & 15 and make it the console UART
-dtparam=uart0
-dtparam=uart0_console
+# dtparam=uart0
+# dtparam=uart0_console
+# add agetty.ttyAMA0 default
+uart_2ndstage=1
 
 dtparam=i2c_arm=on
 #dtparam=i2s=on

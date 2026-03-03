@@ -16,3 +16,4 @@ HOME=/
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
+@reboot		root	sleep 30 && /usr/sbin/ntpdate -s -b -u 0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org | logger

@@ -1,6 +1,7 @@
 app-admin/rsyslog
 app-admin/sudo
 app-editors/nano
+app-eselect/eselect-repository
 app-misc/fdupes
 app-misc/mc
 app-misc/symlinks
