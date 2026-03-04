@@ -15,6 +15,7 @@ dev-debug/strace
 dev-vcs/git
 net-analyzer/nmap
 net-analyzer/traceroute
+net-dialup/minicom
 net-dns/avahi
 net-firewall/nftables
 net-fs/nfs-utils
