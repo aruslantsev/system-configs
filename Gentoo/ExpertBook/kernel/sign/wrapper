@@ -1,0 +1,1 @@
+scripts/sign-file sha512 certs/signing_key.pem certs/signing_key.x509 $1.ko

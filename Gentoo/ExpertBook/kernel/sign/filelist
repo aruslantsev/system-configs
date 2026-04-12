@@ -1,0 +1,4 @@
+./wrapper
+./scripts/sign-file
+./certs/signing_key.pem
+./certs/signing_key.x509
