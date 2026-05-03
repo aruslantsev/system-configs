@@ -35,6 +35,7 @@ kde-apps/kwalletmanager
 kde-apps/okular
 kde-apps/svgpart
 kde-misc/kdeconnect
+kde-plasma/plasma-keyboard
 kde-plasma/plasma-meta
 kde-plasma/spectacle
 media-fonts/terminus-font

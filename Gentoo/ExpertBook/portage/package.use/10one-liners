@@ -7,6 +7,7 @@ media-video/ffmpeg libdrm
 net-analyzer/nmap ncat
 net-fs/nfs-utils nfsv41
 net-fs/samba client
+net-libs/ngtcp2 gnutls # cifs-utils
 net-wireless/wpa_supplicant tkip
 sys-apps/openrc sysv-utils
 sys-apps/systemd-utils boot kernel-install

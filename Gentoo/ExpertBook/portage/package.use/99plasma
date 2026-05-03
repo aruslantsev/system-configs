@@ -11,6 +11,7 @@ kde-frameworks/kconfig qml # core
 kde-frameworks/kfilemetadata taglib # elisa
 kde-frameworks/prison qml # plasma-meta
 kde-frameworks/sonnet qml # core
+kde-frameworks/kimageformats avif #kscreen
 kde-plasma/kwin lock # plasma-meta
 kde-plasma/kwin-x11 lock # plasma-meta
 kde-plasma/plasma-meta -crypt -desktop-portal thunderbolt
